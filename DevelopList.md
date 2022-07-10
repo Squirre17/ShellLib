@@ -1,2 +1,2 @@
 - githun log in simple script
- - Token email weburl and so on
+	- Token email weburl and so on
