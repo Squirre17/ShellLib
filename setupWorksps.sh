@@ -5,7 +5,7 @@ echo bin include tests src docs tmp lib | xargs mkdir -p
 if [ $? -ne 0 ]
 then
 		echo "[!] mkdir error"
-		exiti $?
+		exit $?
 fi
 
 touch ./src/main.c
