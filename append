@@ -1,0 +1,20 @@
+#!/bin/bash
+# to avoid use '>' flush file content
+# place in /usr/bin/
+path=$PWD
+set -eu
+RED="\033[31m"
+BLUE="\033[34m"
+GREEN="\033[32m"
+DFT="\033[0m" # default
+if [ $# -ne 2 ]; then
+  echo -e "[${RED}!${DFT}] Error: <Usage> append msg file"
+  exit 1
+fi
+msg=$1
+file=$2
+if [ ! -f $file ]; then
+  echo -e "[${RED}!${DFT}] Error: not find file ${file}"
+  exit 1
+fi
+echo $msg >> $file
